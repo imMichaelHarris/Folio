@@ -56,6 +56,8 @@ export default function Projects() {
           <div className="flex items-center justify-between py-4 md:py-6">
             <Link href="/">
               <motion.div
+                key="nav-home"
+                layoutId="nav-home"
                 className="text-xl font-bold cursor-pointer"
                 whileHover={{ scale: 1.05 }}
               >
@@ -63,6 +65,7 @@ export default function Projects() {
               </motion.div>
             </Link>
             <motion.h1
+              key="nav-projects"
               layoutId="nav-projects"
               style={{ x: windowWidth < 768 ? titleX : 0 }}
               className="text-2xl md:text-3xl font-bold inline-block"

@@ -72,6 +72,7 @@ export default function Home() {
           {["Projects", "About", "Skills"].map((item, i) => (
             <Link href={`/${item.toLowerCase()}`} key={item}>
               <motion.div
+                key={`nav-${item.toLowerCase()}`}
                 layoutId={`nav-${item.toLowerCase()}`}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
