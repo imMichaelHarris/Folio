@@ -4,8 +4,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 export default function Header() {
-  const pathname = usePathname();
-  const currentPage = pathname === '/' ? 'Home' : pathname.substring(1);
 
   return (
     <motion.header 

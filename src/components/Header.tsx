@@ -19,17 +19,17 @@ const socialLinks = [
 ];
 
 export default function Header() {
-  const pathname = usePathname();
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [ ,setIsScrolled] = useState(false);
   const { scrollY } = useScroll();
 
   const headerOpacity = useTransform(scrollY, [0, 100], [0, 1]);
   const headerY = useTransform(scrollY, [0, 100], [-20, 0]);
 
   useEffect(() => {
-    return scrollY.onChange((latest) => {
+    const unsubscribe = scrollY.onChange((latest) => {
       setIsScrolled(latest > 50);
     });
+    return () => unsubscribe();
   }, [scrollY]);
 
   return (
