@@ -10,6 +10,20 @@ export default function Projects() {
   const { scrollY } = useScroll();
   const titleX = useTransform(scrollY, [0, 100], [0, 100]);
   const [activeProject, setActiveProject] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    // Set initial window width
+    setWindowWidth(window.innerWidth);
+
+    // Handle window resize
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -50,7 +64,7 @@ export default function Projects() {
             </Link>
             <motion.h1
               layoutId="nav-projects"
-              style={{ x: window.innerWidth < 768 ? titleX : 0 }}
+              style={{ x: windowWidth < 768 ? titleX : 0 }}
               className="text-2xl md:text-3xl font-bold inline-block"
             >
               Projects
