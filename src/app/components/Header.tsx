@@ -1,7 +1,6 @@
 'use client'
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Header() {
 

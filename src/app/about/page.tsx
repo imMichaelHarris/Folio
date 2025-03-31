@@ -8,6 +8,7 @@ export default function About() {
   const containerRef = useRef(null);
   const { scrollY } = useScroll();
 
+
   const logoOpacity = useTransform(scrollY, [0, 50], [0, 1]);
   const titleX = useTransform(scrollY, [0, 50], [0, 60]);
 
