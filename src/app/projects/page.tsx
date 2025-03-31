@@ -8,7 +8,6 @@ import { projects } from "@/config/projects";
 export default function Projects() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
-  const logoOpacity = useTransform(scrollY, [0, 100], [0, 1]);
   const titleX = useTransform(scrollY, [0, 100], [0, 100]);
   const [activeProject, setActiveProject] = useState(0);
 

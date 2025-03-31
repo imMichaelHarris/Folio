@@ -10,7 +10,6 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ['Anurait', 'sans-serif'],
-        anurait: ['Anurait', 'sans-serif'],
       },
     },
   },

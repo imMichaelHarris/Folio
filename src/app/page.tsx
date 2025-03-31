@@ -50,7 +50,7 @@ export default function Home() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-4xl md:text-6xl font-bold tracking-tight font-anurait"
+            className="text-4xl md:text-6xl font-bold tracking-tight"
           >
             Michael Harris
           </motion.h1>

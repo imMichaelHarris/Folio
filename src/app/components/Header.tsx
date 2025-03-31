@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 export default function Header() {
   const pathname = usePathname();
   const currentPage = pathname === '/' ? 'Home' : pathname.substring(1);
-  const layoutId = `nav-${currentPage.toLowerCase()}`;
 
   return (
     <motion.header 
