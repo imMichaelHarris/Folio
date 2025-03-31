@@ -48,15 +48,15 @@ export default function About() {
           className="prose prose-lg dark:prose-invert"
         >
           <p>
-            I'm a Software Developer based in Lawndale, California, with a
+            I&apos;m a Software Developer based in Lawndale, California, with a
             passion for building innovative web and mobile applications. My
-            journey in software development began in 2017, and since then, I've
+            journey in software development began in 2017, and since then, I&apos;ve
             grown from learning the basics of web development to leading
             development teams and creating full-stack applications.
           </p>
 
           <p>
-            As a full-stack developer, I've had the opportunity to work on
+            As a full-stack developer, I&apos;ve had the opportunity to work on
             diverse projects, from native mobile applications to complex web
             platforms. At CodePlan, I specialized in implementing payment
             processes and state management solutions, while continuously
@@ -72,15 +72,15 @@ export default function About() {
           </p>
 
           <p>
-            Currently, I'm focused on self-employed development work, taking on
-            challenging projects that push the boundaries of what's possible
+            Currently, I&apos;m focused on self-employed development work, taking on
+            challenging projects that push the boundaries of what&apos;s possible
             with modern web technologies. I work with a variety of tools and
             frameworks including React Native, TypeScript, Node.js, and various
             cloud services to create scalable, user-friendly applications.
           </p>
 
           <p>
-            When I'm not coding, you'll find me playing guitar or exploring new
+            When I&apos;m not coding, you&apos;ll find me playing guitar or exploring new
             technologies. I believe in continuous learning and staying current
             with the latest developments in the tech industry, always looking
             for ways to improve and innovate.
