@@ -20,12 +20,12 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Rallio",
+    title: "Rally Base",
     description: "A native mobile application that allows users to create events and invite their friends and family to better organize gatherings.",
     details: "App uses many third party APIs like Google's map and OAuth services and Twillio for sending text messages to invite users by text message.",
     tech: ["React Native", "Expo", "TypeScript", "Appwrite"],
     link: "https://github.com/imMichaelHarris/rally",
-    liveUrl: "https://rallio.app",
+    liveUrl: "https://rallybase.app",
     videoUrl: "/videos/rallio.mp4",
     isMobile: true,
     style: {
