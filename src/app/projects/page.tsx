@@ -91,7 +91,6 @@ export default function Projects() {
         ))}
       </div>
 
-      {/* Project Counter Display */}
       <div className="fixed bottom-4 left-4 md:left-8 z-50">
         <motion.div
           initial={{ opacity: 0 }}
@@ -135,7 +134,7 @@ export default function Projects() {
                 whileInView={index !== 0 ? { x: 0, opacity: 1 } : undefined}
                 viewport={{ once: true, margin: "-20%" }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className="space-y-3 md:space-y-6"
+                className="space-y-3 md:space-y-6 md:col-span-1 col-span-2"
               >
                 <h2 className="text-2xl md:text-5xl font-bold">{project.title}</h2>
                 <p className="text-base md:text-xl text-gray-600">{project.description}</p>
@@ -186,8 +185,10 @@ export default function Projects() {
                 viewport={{ once: true, margin: "-20%" }}
                 transition={{ duration: 0.7, delay: 0.4 }}
                 className={`${
-                  project.isMobile ? "w-[280px] mx-auto" : "w-full max-w-[1000px] mx-auto"
-                } relative`}
+                  project.isMobile 
+                    ? "w-[200px] md:w-[280px] mx-auto" 
+                    : "w-full max-w-[1000px] mx-auto"
+                } relative hidden md:block`}
                 whileHover={{ 
                   scale: 1.05,
                   boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
@@ -195,41 +196,34 @@ export default function Projects() {
                 }}
               >
                 {project.isMobile && (
-                  <div className="absolute -inset-[16px] border-[16px] border-[#1a1a1a] rounded-[4.5rem] pointer-events-none bg-gradient-to-b from-[#2a2a2a] to-[#1a1a1a] shadow-2xl">
-                    {/* Dynamic Island */}
-                    <div className="absolute -top-[16px] left-1/2 -translate-x-1/2 w-[140px] h-[40px] bg-black rounded-b-[20px]"></div>
-                    {/* Side Button */}
-                    <div className="absolute -right-[16px] top-[140px] w-[4px] h-[70px] bg-gradient-to-b from-[#2a2a2a] to-[#1a1a1a] rounded-full"></div>
-                    {/* Volume Buttons */}
-                    <div className="absolute -left-[16px] top-[140px] w-[4px] h-[45px] bg-gradient-to-b from-[#2a2a2a] to-[#1a1a1a] rounded-full"></div>
-                    <div className="absolute -left-[16px] top-[195px] w-[4px] h-[45px] bg-gradient-to-b from-[#2a2a2a] to-[#1a1a1a] rounded-full"></div>
-                    {/* Camera Module */}
-                    <div className="absolute -right-[16px] top-[280px] w-[8px] h-[8px] bg-black rounded-full">
+                  <div className="absolute -inset-[12px] md:-inset-[16px] border-[12px] md:border-[16px] border-[#1a1a1a] rounded-[3rem] md:rounded-[4.5rem] pointer-events-none bg-gradient-to-b from-[#2a2a2a] to-[#1a1a1a] shadow-2xl">
+                    <div className="absolute -top-[12px] md:-top-[16px] left-1/2 -translate-x-1/2 w-[100px] md:w-[140px] h-[30px] md:h-[40px] bg-black rounded-b-[15px] md:rounded-b-[20px]"></div>
+                    <div className="absolute -right-[12px] md:-right-[16px] top-[100px] md:top-[140px] w-[3px] md:w-[4px] h-[50px] md:h-[70px] bg-gradient-to-b from-[#2a2a2a] to-[#1a1a1a] rounded-full"></div>
+                    <div className="absolute -left-[12px] md:-left-[16px] top-[100px] md:top-[140px] w-[3px] md:w-[4px] h-[35px] md:h-[45px] bg-gradient-to-b from-[#2a2a2a] to-[#1a1a1a] rounded-full"></div>
+                    <div className="absolute -left-[12px] md:-left-[16px] top-[140px] md:top-[195px] w-[3px] md:w-[4px] h-[35px] md:h-[45px] bg-gradient-to-b from-[#2a2a2a] to-[#1a1a1a] rounded-full"></div>
+                    <div className="absolute -right-[12px] md:-right-[16px] top-[200px] md:top-[280px] w-[6px] md:w-[8px] h-[6px] md:h-[8px] bg-black rounded-full">
                       <div className="absolute inset-0.5 bg-[#2a2a2a] rounded-full"></div>
                     </div>
-                    {/* Camera Array */}
-                    <div className="absolute -right-[16px] top-[280px] w-[24px] h-[24px] bg-black rounded-full">
+                    <div className="absolute -right-[12px] md:-right-[16px] top-[200px] md:top-[280px] w-[18px] md:w-[24px] h-[18px] md:h-[24px] bg-black rounded-full">
                       <div className="absolute inset-1 bg-[#2a2a2a] rounded-full"></div>
                       <div className="absolute inset-2 bg-black rounded-full"></div>
                     </div>
-                    {/* Flash */}
-                    <div className="absolute -right-[16px] top-[310px] w-[4px] h-[4px] bg-[#2a2a2a] rounded-full"></div>
+                    <div className="absolute -right-[12px] md:-right-[16px] top-[225px] md:top-[310px] w-[3px] md:w-[4px] h-[3px] md:h-[4px] bg-[#2a2a2a] rounded-full"></div>
                   </div>
                 )}
                 {!project.isMobile && (
-                  <div className="absolute -inset-[20px] border-[20px] border-[#1a1a1a] rounded-[1rem] pointer-events-none bg-gradient-to-b from-[#2a2a2a] to-[#1a1a1a] shadow-2xl">
-                    {/* Monitor Stand */}
-                    <div className="absolute -bottom-[40px] left-1/2 -translate-x-1/2 w-[120px] h-[40px] bg-[#1a1a1a] rounded-b-lg"></div>
-                    {/* Monitor Base */}
-                    <div className="absolute -bottom-[80px] left-1/2 -translate-x-1/2 w-[200px] h-[40px] bg-[#1a1a1a] rounded-lg"></div>
-                    {/* Webcam */}
-                    <div className="absolute -top-[20px] left-1/2 -translate-x-1/2 w-[8px] h-[8px] bg-black rounded-full">
+                  <div className="absolute -inset-[15px] md:-inset-[20px] border-[15px] md:border-[20px] border-[#1a1a1a] rounded-[0.75rem] md:rounded-[1rem] pointer-events-none bg-gradient-to-b from-[#2a2a2a] to-[#1a1a1a] shadow-2xl">
+                    <div className="absolute -bottom-[30px] md:-bottom-[40px] left-1/2 -translate-x-1/2 w-[90px] md:w-[120px] h-[30px] md:h-[40px] bg-[#1a1a1a] rounded-b-lg"></div>
+                    <div className="absolute -bottom-[60px] md:-bottom-[80px] left-1/2 -translate-x-1/2 w-[150px] md:w-[200px] h-[30px] md:h-[40px] bg-[#1a1a1a] rounded-lg"></div>
+                    <div className="absolute -top-[15px] md:-top-[20px] left-1/2 -translate-x-1/2 w-[6px] md:w-[8px] h-[6px] md:h-[8px] bg-black rounded-full">
                       <div className="absolute inset-0.5 bg-[#2a2a2a] rounded-full"></div>
                     </div>
                   </div>
                 )}
                 <div className={`${
-                  project.isMobile ? "aspect-[9/19.2] rounded-[4rem]" : "aspect-video rounded-lg"
+                  project.isMobile 
+                    ? "aspect-[9/19.2] rounded-[2.5rem] md:rounded-[4rem]" 
+                    : "aspect-video rounded-[0.75rem] md:rounded-lg"
                 } bg-gray-100 cursor-pointer overflow-hidden relative group`}>
                   {project.videoUrl ? (
                     <>
@@ -241,7 +235,6 @@ export default function Projects() {
                         muted
                         playsInline
                       />
-                      {/* Muted symbol overlay */}
                       <div className="absolute bottom-4 right-4">
                         <div className="p-2 rounded-full bg-black/50">
                           <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -249,7 +242,6 @@ export default function Projects() {
                           </svg>
                         </div>
                       </div>
-                      {/* Unmute button on hover */}
                       <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                         <motion.button
                           className="p-2 rounded-full bg-black/50 hover:bg-black/70 transition-colors"
