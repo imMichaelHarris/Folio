@@ -20,6 +20,23 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Dance Dex",
+    description: "A platform for dancers to store their videos and have them automatically sorted and orgazized by song.",
+    details: "I was tired of searching through tons of different photos and videos to find the one performace I want to show. This is the ultimate dance library. Keeps all your dance moments in a singular place that is stored on the cloud",
+    tech: ["React Native", "Next.js", "Node.js", "Express", "Expo", "TypeScript", "Supabase", "Docker","Stripe"],
+    link: "https://github.com/imMichaelHarris/dancedex",
+    liveUrl: "https://www.dancedex.com",
+    videoUrl: "/videos/dancedex.mp4",
+    isMobile: true,
+    style: {
+      gradient: {
+        from: "#8b58fc",
+        via: "#9d74fc",
+        to: "#af90fc"
+      }
+    }
+  },
+  {
     title: "Rally Base",
     description: "A native mobile application that allows users to create events and invite their friends and family to better organize gatherings.",
     details: "App uses many third party APIs like Google's map and OAuth services and Twillio for sending text messages to invite users by text message.",
@@ -36,6 +53,7 @@ export const projects: Project[] = [
       }
     }
   },
+ 
   {
     title: "Founder Grants",
     description: "A searchable website attached to a database that can feed users grants based on requirements they enter.",
